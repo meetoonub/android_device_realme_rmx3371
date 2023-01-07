@@ -12,9 +12,9 @@ $(call inherit-product, $(SRC_TARGET_DIR)/product/full_base_telephony.mk)
 $(call inherit-product, device/realme/rmx3371/device.mk)
 
 # Inherit some common Lineage stuff.
-$(call inherit-product, vendor/lineage/config/common_full_phone.mk)
+$(call inherit-product, vendor/octavi/config/common_full_phone.mk)
 
-PRODUCT_NAME := lineage_rmx3371
+PRODUCT_NAME := octavi_rmx3371
 PRODUCT_DEVICE := rmx3371
 PRODUCT_MANUFACTURER := realme
 PRODUCT_BRAND := realme
@@ -24,6 +24,14 @@ PRODUCT_SYSTEM_NAME := RMX3371
 PRODUCT_SYSTEM_DEVICE := RE54E4L1
 
 PRODUCT_GMS_CLIENTID_BASE := android-oppo
+
+# OctaviOS stuff
+TARGET_USES_BLUR := true
+TARGET_WANTS_FOD_ANIMATIONS := true
+OCTAVI_MAINTAINER := Provasishh
+
+# Gapps Build
+WITH_GAPPS := true
 
 PRODUCT_BUILD_PROP_OVERRIDES += \
     PRIVATE_BUILD_DESC="RMX3371-user 13 TP1A.220905.001 S.cd290a_d5d0-4 release-keys" \

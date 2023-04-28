@@ -11,10 +11,29 @@ $(call inherit-product, $(SRC_TARGET_DIR)/product/full_base_telephony.mk)
 # Inherit from rmx3371 device
 $(call inherit-product, device/realme/rmx3371/device.mk)
 
-# Inherit some common Lineage stuff.
-$(call inherit-product, vendor/lineage/config/common_full_phone.mk)
+# Inherit some common superior stuff.
+$(call inherit-product, vendor/superior/config/common.mk)
 
-PRODUCT_NAME := lineage_rmx3371
+# Maintainer Flag (one word only/no spacing)
+MAINTAINER := Provasishh
+
+# Bootanimation Resolution
+TARGET_BOOT_ANIMATION_RES := 1080
+
+#Udfps Stuff
+SUPERIOR_UDFPS_ANIMATIONS := true
+
+#Superior OS Flags
+TARGET_INCLUDE_PIXEL_CHARGER := true
+BUILD_WITH_GAPPS := true
+TARGET_GAPPS_ARCH := arm64
+TARGET_ENABLE_BLUR := true
+USE_MOTO_CALCULATOR := true
+
+# Quick Tap Feature
+TARGET_SUPPORTS_QUICK_TAP := true
+
+PRODUCT_NAME := superior_rmx3371
 PRODUCT_DEVICE := rmx3371
 PRODUCT_MANUFACTURER := realme
 PRODUCT_BRAND := realme
